@@ -1,5 +1,5 @@
 {
     "presets": [
-        "react", "es2015", "stage2"
+        "react", "es2015", "stage-2"
     ]
 }
