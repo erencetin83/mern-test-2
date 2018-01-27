@@ -4,7 +4,7 @@
   "description": "MERN test",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon --exec babel-node server.js --ignore public/",
+    "start": "nodemon --exec babel-node server.js --ignore public/",
     "dev": "webpack -wd"
   },
   "repository": {
@@ -24,8 +24,11 @@
   },
   "homepage": "https://github.com/erencetin83/mern-test-2#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.14.0",
+    "json-loader": "^0.5.7",
     "mongodb": "^3.0.1",
+    "node-sass-middleware": "^0.11.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

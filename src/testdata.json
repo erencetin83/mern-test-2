@@ -1,0 +1,81 @@
+{
+  "forms": [{
+    "__id": "Form1",
+    "title": "Merhaba",
+    "formItems": [{
+        "code": "form1_name",
+        "itemType": "input",
+        "value": "Joe",
+        "caption": "Name",
+        "grid": {
+          "container": "6",
+          "caption": "3",
+          "control": "9"
+        },
+        "itemprops": {
+          "type": "text"
+        }
+      }, {
+        "code": "form1_surname",
+        "itemType": "input",
+        "value": "Well",
+        "caption": "Surname",
+        "grid": {
+          "container": "6",
+          "caption": "3",
+          "control": "9"
+        },
+        "itemprops": {
+          "type": "text"
+        }
+      }, {
+        "code": "form1_2",
+        "itemType": "input",
+        "value": "30",
+        "caption": "Age",
+        "grid": {
+          "container": "6",
+          "caption": "3",
+          "control": "9"
+        },
+        "itemprops": {
+          "type": "number"
+        }
+      }, {
+        "code": "form1_3",
+        "itemType": "combo",
+        "value": "0",
+        "caption": "Are You Sure?",
+        "grid": {
+          "container": "6",
+          "caption": "3",
+          "control": "9"
+        },
+        "itemprops": {
+          "list": [{
+              "code": "YES",
+              "description": "Yes"
+            },
+            {
+              "code": "NO",
+              "description": "No"
+            }
+          ]
+        }
+      },
+      {
+        "code": "form1_buton",
+        "itemType": "button",
+        "caption": "Click Then",
+        "grid": {
+          "container": "6",
+          "caption": "3",
+          "control": "9"
+        },
+        "itemprops": {
+          "type": "primary"
+        }
+      }
+    ]
+  }]
+}
