@@ -4,6 +4,7 @@ import Input from './formitem/Input';
 import Combo from './formitem/Combo';
 import Button from './formitem/Button';
 import Radio from './formitem/Radio';
+import Table from './formitem/Table';
 
 export default class ComponentFactory {
 
@@ -17,6 +18,8 @@ export default class ComponentFactory {
       return <Radio {...item} key={item.code}/>;
     case 'button':
       return <Button {...item} key={item.code}/>; 
+    case 'table':
+      return <Table {...item} key={item.code} />;
     default:
       throw 'invalid ItemType: ' + this.props.itemtype;
     }
