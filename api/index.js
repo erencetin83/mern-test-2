@@ -1,10 +1,11 @@
 import express from 'express';
+import data from '../src/testdata';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/forms', (req, res) => {
   res.send({
-    data: []
+    forms: data.forms
   });
 });
 

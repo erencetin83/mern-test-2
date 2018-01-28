@@ -5,16 +5,18 @@ import Factory from './componentfactory';
 class Form extends React.Component{
 
   static propTypes = {
-    title : PropTypes.string.isRequired,
-    formItems: PropTypes.array.isRequired
+    formItems: PropTypes.array,
+    title: PropTypes.string
   }
 
   render() {
+    console.log(this.props);
+    if (this.props.title == null){ return <div></div>; } 
 
     return <div className="form">
       <div className="title">{this.props.title}</div>
       <div className="content row">
-        {this.props.formItems.map( item => Factory.getComponent(item))}
+        {this.props.formItems.map( formitem => Factory.getComponent(formitem))}
       </div>
     </div>;
   }

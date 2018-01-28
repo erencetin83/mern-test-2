@@ -1,21 +1,30 @@
 import React from 'react';
+import axios from 'axios';
 import PropTypes from 'prop-types';
 
-import Factory from './ComponentFactory';
 import Header from './Header';
+import Form from './Form';
 
 class App extends React.Component{
-  
+
   static propTypes = {
-    forms : PropTypes.array.isRequired
+    initialForms: PropTypes.array
   }
 
   state = {
-    pageHeader: 'Simple Bootstrap form renderer!!!!'
+    pageHeader: 'Simple Bootstrap form renderer!!!!',
+    forms: this.props.initialForms
   };
  
   componentDidMount () {
-    console.info('App mounted');
+    axios.get('/api/forms')
+      .then(resp => {
+        this.setState({
+          forms : resp.data.forms
+        });
+      })
+      .catch(console.error);
+   
   }
 
   componentWillUnmount() {
@@ -23,10 +32,16 @@ class App extends React.Component{
   }
 
   render() {
+    console.log(this.state.forms);
+    let mydiv = <div></div>;
+    
+    if (this.state.forms)
+      mydiv = <div>{this.state.forms.map(form => <Form key={form.__id} {...form} />)} </div>;
+      
     return (
       <div>
         <Header message={this.state.pageHeader}/>
-        <div>{this.props.forms[0].formItems.map(item => Factory.getComponent(item))}</div>
+        {mydiv}
       </div>
     );
   }
