@@ -1,7 +1,7 @@
 {
   "forms": [{
     "__id": "Form1",
-    "title": "Merhaba",
+    "title": "My First Form Title",
     "formItems": [{
         "code": "form1_name",
         "itemType": "input",
@@ -43,7 +43,7 @@
         }
       }, {
         "code": "form1_3",
-        "itemType": "combo",
+        "itemType": "radio",
         "value": "0",
         "caption": "Are You Sure?",
         "grid": {
